@@ -1,0 +1,153 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:768px) {
+    .body {
+        width: 100%;
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .body {
+        width: 100%;
+        max-width: 480px;
+    }
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url(bg-river.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section {
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+section:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    backdrop-filter: blur(10px);
+}
+
+.header {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.header h1 {
+    position: relative;
+    top: 50px;
+    margin-bottom: -40px;
+}
+
+.header h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(114, 185, 114);
+    transition: all .3s;
+    transform: translateX(-50%);
+    margin-bottom: -5px;
+}
+
+section:hover > .header > h1::after {
+    text-decoration: underline;
+    width: 30%;
+}
+
+/* Style form */
+
+/* Style input */
+
+.form-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box .input-box {
+    width: 350px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    line-height: 50px;
+    padding-left: 15px;
+    width: 100%;
+    font-size: 15px;
+    padding-right: 15px;
+}
+
+
+
+/* button style */
+
+.btn{
+    width: 175px;
+    height: 50px;
+    margin: auto;
+    margin-left: 105px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-color: rgb(114, 185, 114);
+    transition: .2s ease;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px rgba(114, 185, 114, 1);
+}
+
+/* Style link login here */
+
+.form-box a {
+    position: absolute;
+    bottom: 50px;
+    color: black;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
